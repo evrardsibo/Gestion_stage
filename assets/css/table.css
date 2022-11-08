@@ -1,0 +1,27 @@
+.table-style {
+    border-collapse: collapse;
+    min-width: 400px;
+    width: auto;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    
+    margin: 20px auto;
+    border: var(--border);
+}
+thead tr {
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px 20px;
+}
+
+tbody tr, td, th {
+    border: var(--border);
+}
+
+tbody tr:nth-child(even){
+    background-color: #f3f3f3;
+}
