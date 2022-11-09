@@ -220,7 +220,7 @@ footer{
 }
 
 .text-danger{
-    color: var(--primary);
+    color: red;
 }
 
 /* form controller */

@@ -1,3 +1,4 @@
+    <?php require_once './models/showModel.php'?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -14,31 +15,31 @@
                             <tbody>
                                 <tr>
                                     <td>Id :</td>
-                                    <td>967722 </td>
+                                    <td><?= $show['id_pref'] ?></td>
                                 </tr>
                                 <tr>
                                     <td>Anacad :</td>
-                                    <td>2021</td>
+                                    <td><?= $show['anacad'] ?></td>
                                 </tr>
                                 <tr>
                                     <td>Matricule :</td>
-                                    <td>101811859</td>
+                                    <td><?= $show['matricule'] ?></td>
                                 </tr>
                                 <tr>
                                     <td>Hopital :</td>
-                                    <td>26</td>
+                                    <td><?= $show['hopital'] ?></td>
                                 </tr>
                                 <tr>
                                     <td>Service :</td>
-                                    <td>375</td>
+                                    <td><?= $show['service'] ?></td>
                                 </tr>
                                 <tr>
                                     <td>Ordre :</td>
-                                    <td>1</td>
+                                    <td><?= $show['ordre'] ?></td>
                                 </tr>
                                 <tr>
                                     <td>TypePref :</td>
-                                    <td>1</td>
+                                    <td><?= $show['typePref'] ?></td>
                                 </tr>
                             </tbody>
                         </table>

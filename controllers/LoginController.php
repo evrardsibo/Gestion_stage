@@ -1,6 +1,6 @@
 <?php
 
-    require_once './models/database.php';
+    $pdo = require_once './models/database.php';
     const ERROR_FIELDS = 'This fiels is required :';
     const ERROR_MAIL = 'Email unkwon !';
     const ERROR_PASSWORD = 'Passowrd not correct !';
@@ -13,7 +13,7 @@
 
     $input = filter_input_array(INPUT_POST, FILTER_SANITIZE_EMAIL);
     $email = $input['email'] ?? '';
-    $pwd = $_POST['password'] ?? '';
+    $password = $_POST['password'] ?? '';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') 
     {
@@ -33,7 +33,7 @@
 
         if(!array_filter($error, fn($e) => $e !== ''))
         {
-            $statementUser = $pdo->prepare('SELECT * FROM users WHERE email=:email');
+            $statementUser = $pdo->prepare('SELECT * FROM users WHERE mail=:email');
             $statementUser->bindValue(':email', $email);
             $statementUser->execute();
             $user = $statementUser->fetch();

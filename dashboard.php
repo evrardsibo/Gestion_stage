@@ -1,4 +1,4 @@
-    <?php require_once './models/database.php' ?>
+    <?php require_once './Models/ViewModel.php' ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -28,17 +28,18 @@
                         </thead>
 
                         <tbody>
+                            <?php foreach( $users as $user) : ?>
                             <tr>
-                                <td>967722</td>
-                                <td>2021</td>
-                                <td>101811859</td>
-                                <td>26</td>
-                                <td>375</td>
-                                <td>1</td>
-                                <td>1</td>
+                                <td><?= $user['id_pref'] ?></td>
+                                <td><?= $user['anacad'] ?></td>
+                                <td><?= $user['matricule'] ?></td>
+                                <td><?= $user['hopital'] ?></td>
+                                <td><?= $user['service'] ?></td>
+                                <td><?= $user['ordre'] ?></td>
+                                <td><?= $user['typePref'] ?></td>
                                 <td>
                                     <div class="form-action">
-                                        <a href="./view.php" target="blank" class="btn btn-primary">
+                                        <a href="/view.php?id=<?= $show['id_pref'] ?>" class="btn btn-primary">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                         <a href="./update.php" target="blank" class="btn btn-secondary">
@@ -50,6 +51,7 @@
                                     </div>
                                 </td>
                             </tr>
+                            <?php endforeach ?>
                         </tbody>
                     </table>
                 </div>
