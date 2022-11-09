@@ -1,3 +1,4 @@
+    <?php require_once './models/database.php' ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>

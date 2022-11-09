@@ -1,4 +1,4 @@
-
+<?php require_once './controllers/LoginController.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,16 +12,16 @@
         <div class="content">
             <div class="block p-20  form-container">
                     <h1>Login</h1>
-                    <form action="./auth-login.php" method="post">
+                    <form action="./" method="post">
                         <div class="form-control">
                             <label for="email">Email *</label>
-                            <input type="text" name="email" id="email" value="">
-                            <span class="text-danger"></span>
+                            <input type="email" name="email" id="email" value="">
+                            <span class="text-danger"><?= $error['email'] ?></span>
                         </div>
                         <div class="form-control">
                             <label for="password">Password *</label>
                             <input type="password" name="password" id="password">
-                            <span class="text-danger"></span>
+                            <span class="text-danger"><?= $error['password'] ?></span>
                         </div>
                         <div class="form-action">
                             <button class="btn btn-primary" type="submit">Login</button>
